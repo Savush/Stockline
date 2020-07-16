@@ -40,7 +40,7 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('zkhuH+L/lRtbk35aAb83dFNYnLulHl9UBbABmOkvoTX7Q3LJRLk1blE6nOACBjHm6w1Mj2XKnfKFi9tW/IDPU2CpNnSGKk5dr+g86iV/3Fpbr+tO/2NuZSelQS0q2Omps8Q4TVOduKKRj9mNY7vFoAdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('bd087bff4b4f9eddbc211e1ffb26dc64')
 # rich_menu_id = 'richmenu-b27a845f4472900e9a89d39c3a3bd40d'
-my_user_id = 'Your UserID'
+my_user_id = 'U79e750a4a464efcf8d215ea1f7762612'
 line_bot_api.push_message(my_user_id, TextSendMessage(text="start"))
 @app.route("/")
 def home():
@@ -73,97 +73,97 @@ def handle_message(event):
     uid = profile.user_id # 發訊者ID
 #================================ 
     # 問卷
-    if re.match("問卷分析", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.greeting_msg))
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q1))
-        content = questionnaire.Q1_menu()
-        line_bot_api.push_message(uid, content)
-        return 0
-    elif re.match("Q2", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q2))
-        line_bot_api.push_message(uid, questionnaire.Q2_menu())
-        return 0
-    elif re.match("Q3", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q3))
-        line_bot_api.push_message(uid, questionnaire.Q3_menu())
-        return 0
-    elif re.match("Q4", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q4))
-        line_bot_api.push_message(uid, questionnaire.Q4_menu())
-        return 0
-    elif re.match("Q5", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q5))
-        line_bot_api.push_message(uid, questionnaire.Q5_menu())
-        return 0
-    elif re.match("Q6", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q6))
-        line_bot_api.push_message(uid, questionnaire.Q6_menu())
-        return 0
-    elif re.match("Q7", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q7))
-        line_bot_api.push_message(uid, questionnaire.Q7_menu())
-        return 0
-    elif re.match("Q8", msg):
-        line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q8))
-        line_bot_api.push_message(uid, questionnaire.Q8_menu())
-        return 0
-    elif re.match("類型A", msg):
-        img_url = questionnaire.type_A
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型B", msg):
-        img_url = questionnaire.type_B
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型B", msg):
-        img_url = questionnaire.type_B
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型C", msg):
-        img_url = questionnaire.type_C
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型D", msg):
-        img_url = questionnaire.type_D
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型E", msg):
-        img_url = questionnaire.type_E
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型F", msg):
-        img_url = questionnaire.type_F
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型G", msg):
-        img_url = questionnaire.type_G
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型H", msg):
-        img_url = questionnaire.type_H
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型I", msg):
-        img_url = questionnaire.type_I
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
-    elif re.match("類型J", msg):
-        img_url = questionnaire.type_J
-        line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
-        return 0
+ #   if re.match("問卷分析", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.greeting_msg))
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q1))
+ #       content = questionnaire.Q1_menu()
+ #       line_bot_api.push_message(uid, content)
+ #       return 0
+ #   elif re.match("Q2", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q2))
+ #       line_bot_api.push_message(uid, questionnaire.Q2_menu())
+ #       return 0
+ #   elif re.match("Q3", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q3))
+ #       line_bot_api.push_message(uid, questionnaire.Q3_menu())
+ #       return 0
+ #   elif re.match("Q4", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q4))
+ #       line_bot_api.push_message(uid, questionnaire.Q4_menu())
+ #       return 0
+ #   elif re.match("Q5", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q5))
+ #       line_bot_api.push_message(uid, questionnaire.Q5_menu())
+ #       return 0
+ #   elif re.match("Q6", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q6))
+ #       line_bot_api.push_message(uid, questionnaire.Q6_menu())
+ #       return 0
+ #   elif re.match("Q7", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q7))
+ #       line_bot_api.push_message(uid, questionnaire.Q7_menu())
+ #       return 0
+ #   elif re.match("Q8", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage(questionnaire.Q8))
+ #       line_bot_api.push_message(uid, questionnaire.Q8_menu())
+ #       return 0
+ #   elif re.match("類型A", msg):
+ #       img_url = questionnaire.type_A
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型B", msg):
+ #       img_url = questionnaire.type_B
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型B", msg):
+ #       img_url = questionnaire.type_B
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型C", msg):
+ #       img_url = questionnaire.type_C
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型D", msg):
+ #       img_url = questionnaire.type_D
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型E", msg):
+ #       img_url = questionnaire.type_E
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型F", msg):
+ #       img_url = questionnaire.type_F
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型G", msg):
+ #       img_url = questionnaire.type_G
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型H", msg):
+ #       img_url = questionnaire.type_H
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型I", msg):
+ #       img_url = questionnaire.type_I
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
+ #   elif re.match("類型J", msg):
+ #       img_url = questionnaire.type_J
+ #       line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
+ #       return 0
 #==========================================
-    elif re.match("新書榜", msg):
-        line_bot_api.push_message(uid, TextSendMessage("將給您最新理財新書......"))
-        flex_message = Msg_Template.new_books()
-        line_bot_api.push_message(uid, flex_message)
-        return 0
-    elif re.match("暢銷榜", msg):
-        line_bot_api.push_message(uid, TextSendMessage("將給您最新理財暢銷書......"))
-        flex_message = Msg_Template.famous_books()
-        line_bot_api.push_message(uid, flex_message)
-        return 0
+ #   elif re.match("新書榜", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage("將給您最新理財新書......"))
+ #       flex_message = Msg_Template.new_books()
+ #       line_bot_api.push_message(uid, flex_message)
+ #       return 0
+ #   elif re.match("暢銷榜", msg):
+ #       line_bot_api.push_message(uid, TextSendMessage("將給您最新理財暢銷書......"))
+ #       flex_message = Msg_Template.famous_books()
+ #       line_bot_api.push_message(uid, flex_message)
+ #       return 0
 #==========================================    
-    elif re.match("/股票", msg):
+    if  re.match("/股票", msg):
         content = Msg_Template.menu_stock_msg
         line_bot_api.push_message(uid, TextSendMessage(content))
         content = Msg_Template.menu_etf_msg
@@ -189,14 +189,14 @@ def handle_message(event):
         content = Msg_diagnose.diagnose_menu()
         line_bot_api.push_message(uid, content)
         return 0
-    elif re.match("/產業文章", msg):
-        content = Msg_Template.industrial_artical()
-        line_bot_api.push_message(uid, content)
-        return 0
-    elif re.match("理財YOUTUBER推薦", msg):
-        content = Msg_Template.youtube_channel()
-        line_bot_api.push_message(uid, content)
-        return 0
+ #   elif re.match("/產業文章", msg):
+ #       content = Msg_Template.industrial_artical()
+ #       line_bot_api.push_message(uid, content)
+ #        return 0
+ #   elif re.match("理財YOUTUBER推薦", msg):
+ #       content = Msg_Template.youtube_channel()
+ #       line_bot_api.push_message(uid, content)
+ #       return 0
 #===========================================    
     elif re.match('關注[0-9]{4}' ,msg): # 使用者新增股票至股票清單
         stockNumber = msg[2:6]
@@ -210,18 +210,18 @@ def handle_message(event):
                 content = mongodb.write_my_stock(uid, user_name , stockNumber, "未設定", "未設定")
         line_bot_api.push_message(uid, TextSendMessage(content))
         return 0
-    elif re.match("股票教學", msg):
-        content = Msg_Template.stock_info_menu()
-        line_bot_api.push_message(uid, content)
-        return 0
-    elif re.match("外匯教學", msg):
-        content = Msg_Exrate.Exrate_msg
-        line_bot_api.push_message(uid, TextSendMessage(content))
-        return 0
-    elif re.match("快樂學理財", msg):
-        content = Msg_Template.learning_menu()
-        line_bot_api.push_message(uid, content)
-        return 0
+ #   elif re.match("股票教學", msg):
+ #       content = Msg_Template.stock_info_menu()
+ #       line_bot_api.push_message(uid, content)
+ #       return 0
+ #   elif re.match("外匯教學", msg):
+ #       content = Msg_Exrate.Exrate_msg
+ #       line_bot_api.push_message(uid, TextSendMessage(content))
+ #       return 0
+ #   elif re.match("快樂學理財", msg):
+ #       content = Msg_Template.learning_menu()
+ #       line_bot_api.push_message(uid, content)
+ #       return 0
     elif re.match("三大投資分析表", msg):
         img_url = "https://i.imgur.com/StGNRGR.png"
         line_bot_api.push_message(uid, ImageSendMessage(original_content_url=img_url, preview_image_url=img_url))
@@ -266,14 +266,14 @@ def handle_message(event):
         content = Msg_Template.proper_noun(msg)
         line_bot_api.push_message(uid, TextSendMessage(content))
         return 0
-    elif re.match("理財電影", msg):
-        content =Msg_Template.movies()
-        line_bot_api.push_message(uid, content)
-        return 0
-    elif re.match("理財書籍", msg):
-        content = Msg_Template.fin_books()
-        line_bot_api.push_message(uid, content)
-        return 0
+ #   elif re.match("理財電影", msg):
+ #       content =Msg_Template.movies()
+ #        line_bot_api.push_message(uid, content)
+ #       return 0
+ #   elif re.match("理財書籍", msg):
+ #       content = Msg_Template.fin_books()
+ #       line_bot_api.push_message(uid, content)
+ #       return 0
     elif re.match("比較", msg): # 範例 : msg = '比較2330/2002/2317'
         line_bot_api.push_message(uid, TextSendMessage('稍等一下, 我們將會給您這幾檔股票收盤價走勢圖...'))
         img_url = stock_compare.show_pic(msg)

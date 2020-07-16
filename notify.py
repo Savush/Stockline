@@ -11,8 +11,8 @@ import urllib.parse
 from pymongo import MongoClient
 
 # 必須放上自己的Channel Access Token
-line_bot_api = LineBotApi('Your Channel Access Token')
-yourID='Your User ID'
+line_bot_api = LineBotApi('zkhuH+L/lRtbk35aAb83dFNYnLulHl9UBbABmOkvoTX7Q3LJRLk1blE6nOACBjHm6w1Mj2XKnfKFi9tW/IDPU2CpNnSGKk5dr+g86iV/3Fpbr+tO/2NuZSelQS0q2Omps8Q4TVOduKKRj9mNY7vFoAdB04t89/1O/w1cDnyilFU=')
+yourID='U79e750a4a464efcf8d215ea1f7762612'
 
 # Authentication Database認證資料庫
 stockDB='mystock'

@@ -5,11 +5,11 @@ import matplotlib
 matplotlib.use('Agg')
 import datetime
 from imgurpython import ImgurClient
-client_id = '07f1098efd49fcb'
-client_secret = 'c802e2b89ad38a83341f53148a41058c65a65d42'
-album_id = '817ZzND'
-access_token = '0409f8c9d920da65fc8bb9c3ec5b029c4dc4869c'
-refresh_token = 'dd279237af22c09c879a84105e209e13bff5e227'
+client_id = '51c011c2454f727'
+client_secret = '3af8801cea206a0d67c3a29bb05f96a28ea5bea5'
+album_id = 'tJlat3h'
+access_token = 'e6b9901d272bbf15b61632c69251df9922125b11'
+refresh_token = '7f6717a78344df17ed1bb0a7dfe4e5c59807d44a'
 
 def showImgur(fileName):
         # 連接imgur
