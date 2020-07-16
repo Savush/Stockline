@@ -19,7 +19,7 @@ from msg_template import Msg_News
 from msg_template import Msg_diagnose
 import new_famous_book
 import kchart
-import filter_stock
+#import filter_stock
 import Technical_Analysis
 import Technical_Analysis_test
 import Fundamental_Analysis
@@ -185,10 +185,10 @@ def handle_message(event):
         content = Msg_Template.menu_mylist_msg
         line_bot_api.push_message(uid, TextSendMessage(content))
         return 0
-    elif re.match("#股票健診", msg):
-        content = Msg_diagnose.diagnose_menu()
-        line_bot_api.push_message(uid, content)
-        return 0
+ #   elif re.match("#股票健診", msg):
+ #       content = Msg_diagnose.diagnose_menu()
+ #       line_bot_api.push_message(uid, content)
+ #       return 0
  #   elif re.match("/產業文章", msg):
  #       content = Msg_Template.industrial_artical()
  #       line_bot_api.push_message(uid, content)
@@ -339,54 +339,53 @@ def handle_message(event):
             content = Msg_fundamental_ability.profit_ability(stockNumber, stockName)
             line_bot_api.push_message(uid, content)
         return 0
-    elif re.match("排除地雷股健診", msg):
-        line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入地雷股+股票代碼，如「地雷股2002」，即可快速了解該個股是否值得投資!"))
-        return 0
-    elif re.match("定存股健診", msg):
-        line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入定存股+股票代碼，如「定存股2002」，即可快速了解該個股是否值得投資!"))
-        return 0
-    elif re.match("成長股健診", msg):
-        line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入成長股+股票代碼，如「成長股2002」，即可快速了解該個股是否值得投資!"))
-        return 0
-    elif re.match("便宜股健診", msg):
-        line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入便宜股+股票代碼，如「便宜股2002」，即可快速了解該個股是否值得投資!"))
-        return 0
-    elif re.match("地雷股[0-9]{4}", msg):
-        stockNumber = msg[3:]
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'地雷股排除健診...'))
-        stockName = stockprice.get_stock_name(stockNumber)
-        if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
-        else:
-            content = Msg_diagnose.mine_stock_menu(stockNumber, stockName)
-            line_bot_api.push_message(uid, content)
-        return 0
-    elif re.match("成長股[0-9]{4}", msg):
-        stockNumber = msg[3:]
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'成長股健診...'))
-        stockName = stockprice.get_stock_name(stockNumber)
-        if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
-        else:
-            content = Msg_diagnose.growth_stock_menu(stockNumber, stockName)
-            line_bot_api.push_message(uid, content)
-        return 0
-    elif re.match("定存股[0-9]{4}", msg):
-        stockNumber = msg[3:]
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'定存股健診...'))
-        stockName = stockprice.get_stock_name(stockNumber)
-        if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
-        else:
+  #  elif re.match("排除地雷股健診", msg):
+  #      line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入地雷股+股票代碼，如「地雷股2002」，即可快速了解該個股是否值得投資!"))
+ #       return 0
+ #   elif re.match("定存股健診", msg):
+  #      line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入定存股+股票代碼，如「定存股2002」，即可快速了解該個股是否值得投資!"))
+  #      return 0
+  #  elif re.match("成長股健診", msg):
+   #     line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入成長股+股票代碼，如「成長股2002」，即可快速了解該個股是否值得投資!"))
+  #      return 0
+   # elif re.match("便宜股健診", msg):
+   #     line_bot_api.push_message(uid, TextSendMessage(u'\U0001F538'+"請輸入便宜股+股票代碼，如「便宜股2002」，即可快速了解該個股是否值得投資!"))
+   #     return 0
+   # elif re.match("地雷股[0-9]{4}", msg):
+   #     stockNumber = msg[3:]
+    #    line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'地雷股排除健診...'))
+   #     stockName = stockprice.get_stock_name(stockNumber)
+   #     if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
+   #     else:
+   #         content = Msg_diagnose.mine_stock_menu(stockNumber, stockName)
+   #         line_bot_api.push_message(uid, content)
+    #    return 0
+  #  elif re.match("成長股[0-9]{4}", msg):
+   #     stockNumber = msg[3:]
+   #     line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'成長股健診...'))
+   #     stockName = stockprice.get_stock_name(stockNumber)
+   ##    else:
+    #        content = Msg_diagnose.growth_stock_menu(stockNumber, stockName)
+    #        line_bot_api.push_message(uid, content)
+    #    return 0
+   # elif re.match("定存股[0-9]{4}", msg):
+   #     stockNumber = msg[3:]
+  #      line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'定存股健診...'))
+  #      stockName = stockprice.get_stock_name(stockNumber)
+  #      if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
+  #      else:
       #      content = Msg_diagnose.fixed_deposit_stock_menu(stockNumber, stockName)
-            line_bot_api.push_message(uid, content)
-        return 0
-    elif re.match("便宜股[0-9]{4}", msg):
-        stockNumber = msg[3:]
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'便宜股健診...'))
-        stockName = stockprice.get_stock_name(stockNumber)
-        if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
-        else:
-            content = Msg_diagnose.cheap_stock_menu(stockNumber, stockName)
-            line_bot_api.push_message(uid, content)
-        return 0
+ #           line_bot_api.push_message(uid, content)
+  #      return 0
+  #  elif re.match("便宜股[0-9]{4}", msg):
+  #      stockNumber = msg[3:]
+   #     line_bot_api.push_message(uid, TextSendMessage('稍等一下, 正在為您做股票編號'+ stockNumber +'便宜股健診...'))
+  #      stockName = stockprice.get_stock_name(stockNumber)
+  #      if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
+  #      else:
+  #          content = Msg_diagnose.cheap_stock_menu(stockNumber, stockName)
+  #          line_bot_api.push_message(uid, content)
+   #     return 0
     elif re.match('ETF技術面[0-9]', msg):
         stockNumber = msg.strip("ETF技術面")
         line_bot_api.push_message(uid, TextSendMessage('稍等一下, 分析ETF編號'+ stockNumber +'的股價中...'))
