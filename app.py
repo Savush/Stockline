@@ -19,7 +19,7 @@ from msg_template import Msg_News
 from msg_template import Msg_diagnose
 import new_famous_book
 import kchart
-# import filter_stock
+import filter_stock
 import Technical_Analysis
 import Technical_Analysis_test
 import Fundamental_Analysis
