@@ -417,160 +417,160 @@ def growth_stock_menu(stockNumebr, stockName): # 成長股健診
     )
     return flex_message
 
-def fixed_deposit_stock_menu(stockNumebr, stockName): # 定存股健診
-    content = filter_stock.dinchun(stockNumebr)
-    pass_list = content[0]
-    ans = content[1]
-    count = content[2]
-    color_list = content[3]
-    flex_message = FlexSendMessage(
-        alt_text="定存股健診",
-            contents={
-            "type": "bubble",
-            "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                {
-                    "type": "text",
-                    "text": "定存股健診完整報告",
-                    "weight": "bold",
-                    "size": "xl"
-                },
-                {
-                    "type": "image",
-                    "url": "https://i.imgur.com/DEsuu4Z.png",
-                    "size": "xl",
-                    "margin": "xxl"
-                },
-                {
-                    "type": "text",
-                    "text": "定存股健診利用 5 項和股息、殖利率相關的指標，鑑定公司是否適合作為定存股投資。"+ stockName +"在這 5 個指標中，通過了其中" + count + " 個 ("+ ans +") 合格條件。",
-                    "color": "#666666",
-                    "wrap": True,
-                    "margin": "xxl",
-                    "size": "xs"
-                },
-                {
-                    "type": "separator",
-                    "margin": "none"
-                },
-                {
-                    "type": "box",
-                    "layout": "vertical",
-                    "spacing": "sm",
-                    "contents": [
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                        {
-                            "type": "text",
-                            "text": pass_list[0],
-                            "color": color_list[0],
-                            "size": "xs"
-                        },
-                        {
-                            "type": "text",
-                            "text": "1.近一年股息殖利率大於 6 %",
-                            "color": "#111111",
-                            "flex": 4,
-                            "wrap": True,
-                            "size": "xs"
-                        }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                        {
-                            "type": "text",
-                            "text": pass_list[1],
-                            "color": color_list[1],
-                            "size": "xs"
-                        },
-                        {
-                            "type": "text",
-                            "text": "2.近五年平均股息殖利率大於 6 %",
-                            "color": "#111111",
-                            "wrap": True,
-                            "flex": 4,
-                            "size": "xs"
-                        }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                        {
-                            "type": "text",
-                            "text": pass_list[2],
-                            "color": color_list[2],
-                            "size": "xs"
-                        },
-                        {
-                            "type": "text",
-                            "text": "3.連續五年都有發股息",
-                            "color": "#111111",
-                            "flex": 4,
-                            "wrap": True,
-                            "size": "xs"
-                        }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                        {
-                            "type": "text",
-                            "text": pass_list[3],
-                            "color": color_list[3],
-                            "size": "xs"
-                        },
-                        {
-                            "type": "text",
-                            "text": "4.股息發放率五年內有三年大於 50 %",
-                            "color": "#111111",
-                            "wrap": True,
-                            "flex": 4,
-                            "size": "xs"
-                        }
-                        ]
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                        {
-                            "type": "text",
-                            "text": pass_list[4],
-                            "color": color_list[4],
-                            "size": "xs"
-                        },
-                        {
-                            "type": "text",
-                            "text": "5.股息發放率五年平均大於 50%",
-                            "flex": 4,
-                            "wrap": True,
-                            "size": "xs"
-                        }
-                        ]
-                    }
-                    ]
-                    }
-                    ]
-                },
-                "styles": {
-                    "footer": {
-                    "separator": True
-                    }
-                }
-        }
-    )
-    return flex_message
+#def fixed_deposit_stock_menu(stockNumebr, stockName): # 定存股健診
+ #   content = filter_stock.dinchun(stockNumebr)
+ #   pass_list = content[0]
+#    ans = content[1]
+ #   count = content[2]
+ #   color_list = content[3]
+ #   flex_message = FlexSendMessage(
+ #       alt_text="定存股健診",
+  #          contents={
+ #           "type": "bubble",
+ #           "body": {
+ #               "type": "box",
+  #              "layout": "vertical",
+   #             "contents": [
+   #             {
+      #              "type": "text",
+   #                 "text": "定存股健診完整報告",
+   #                 "weight": "bold",
+    #                "size": "xl"
+    #            },
+    #            {
+     #               "type": "image",
+      #              "url": "https://i.imgur.com/DEsuu4Z.png",
+      #              "size": "xl",
+    #                "margin": "xxl"
+    #            },
+    #            {
+    # #               "type": "text",
+     #               "text": "定存股健診利用 5 項和股息、殖利率相關的指標，鑑定公司是否適合作為定存股投資。"+ stockName +"在這 5 個指標中，通過了其中" + count + " 個 ("+ ans +") 合格條件。",
+     #               "color": "#666666",
+      #              "wrap": True,
+      #              "margin": "xxl",
+      #              "size": "xs"
+     #           },
+     #           {
+     #               "type": "separator",
+     #               "margin": "none"
+      #          },
+    #            {
+    #                "type": "box",
+    #                "layout": "vertical",
+     #               "spacing": "sm",
+     #               "contents": [
+    #                {
+    #                    "type": "box",
+    #                    "layout": "horizontal",
+    #                    "contents": [
+    #                    {
+    #                        "type": "text",
+   #                         "text": pass_list[0],
+   #                         "color": color_list[0],
+    #                        "size": "xs"
+    #                    },
+    #                    {
+    #                        "type": "text",
+    #                        "text": "1.近一年股息殖利率大於 6 %",
+    #                        "color": "#111111",
+    #                        "flex": 4,
+     #                       "wrap": True,
+     #                       "size": "xs"
+       #                 }
+    #                    ]
+       #             },
+     #               {
+    #                    "type": "box",
+  #                      "layout": "horizontal",
+    #                    "contents": [
+      #                  {
+    #                        "type": "text",
+     #                       "text": pass_list[1],
+     #                       "color": color_list[1],
+     #                       "size": "xs"
+     #                   },
+       #                 {
+      #                      "type": "text",
+      #                      "text": "2.近五年平均股息殖利率大於 6 %",
+      #                      "color": "#111111",
+     #                       "wrap": True,
+     #                       "flex": 4,
+    #                        "size": "xs"
+    #                    }
+    #                    ]
+    #                },
+    #                {
+    #                    "type": "box",
+    #                    "layout": "horizontal",
+      #                  "contents": [
+       #                 {
+      #                      "type": "text",
+      #                      "text": pass_list[2],
+      #                      "color": color_list[2],
+      #                      "size": "xs"
+       #                 },
+      ##                  {
+      #                      "type": "text",
+      #                      "text": "3.連續五年都有發股息",
+      #                      "color": "#111111",
+      #                      "flex": 4,
+       #                     "wrap": True,
+      #                      "size": "xs"
+     #                   }
+     #                   ]
+     #               },
+    #                {
+     #                   "type": "box",
+     #                   "layout": "horizontal",
+    #                    "contents": [
+   #                     {
+   #                         "type": "text",
+   #                         "text": pass_list[3],
+   #                         "color": color_list[3],
+   #                         "size": "xs"
+   #                     },
+    #                    {
+   #                         "type": "text",
+   #                         "text": "4.股息發放率五年內有三年大於 50 %",
+   #                         "color": "#111111",
+   #                         "wrap": True,
+   ##                         "flex": 4,
+   #                         "size": "xs"
+  #                      }
+  #                      ]
+  #                  },
+  #                  {
+  #                      "type": "box",
+   #                     "layout": "horizontal",
+  #                      "contents": [
+   #                     {
+  #                          "type": "text",
+  #                          "text": pass_list[4],
+  #                          "color": color_list[4],
+  #                          "size": "xs"
+  #                      },
+  #                      {
+  #                          "type": "text",
+  #                          "text": "5.股息發放率五年平均大於 50%",
+  #                          "flex": 4,
+ #                           "wrap": True,
+  #                          "size": "xs"
+  #                      }
+#                        ]
+ #                   }
+ #                   ]
+ #                   }
+ #                   ]
+ #               },
+ #               "styles": {
+ #                   "footer": {
+#                    "separator": True
+ #                   }
+#                }
+#       }
+#    )
+#    return flex_message
 
 def cheap_stock_menu(stockNumebr, stockName): # 便宜股健診
     content = filter_stock.cheap_stock(stockNumebr)

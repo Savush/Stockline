@@ -375,7 +375,7 @@ def handle_message(event):
         stockName = stockprice.get_stock_name(stockNumber)
         if stockName == "no": line_bot_api.push_message(uid, TextSendMessage("股票代碼錯誤"))
         else:
-            content = Msg_diagnose.fixed_deposit_stock_menu(stockNumber, stockName)
+      #      content = Msg_diagnose.fixed_deposit_stock_menu(stockNumber, stockName)
             line_bot_api.push_message(uid, content)
         return 0
     elif re.match("便宜股[0-9]{4}", msg):
