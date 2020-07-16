@@ -16,7 +16,7 @@ from msg_template import Msg_Template
 from msg_template import questionnaire
 from msg_template import Msg_Exrate
 from msg_template import Msg_News
-from msg_template import Msg_diagnose
+#from msg_template import Msg_diagnose
 import new_famous_book
 import kchart
 #import filter_stock
