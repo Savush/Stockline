@@ -150,7 +150,7 @@ def dinchun(stockNumber):
     average1=[]
     if len(pf3[0]['現金股利發放率'])>=4:
         for i in range(4):
-            average1.append(float(pf1[0]['現金股利發放率'][i].strip('%')))
+            average1.append(float(pf3[0]['現金股利發放率'][i].strip('%')))
         average1=sum(average1)/4
     else:
         average1=0
