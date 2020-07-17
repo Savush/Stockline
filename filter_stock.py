@@ -129,7 +129,7 @@ def dinchun(stockNumber):
         if float(m)==z:
             z-=1
             c+=1
-    if c==5:
+    if c>=5:
         pass_list.append(is_pass)
         color_list.append(is_pass_color)
         x += 1
