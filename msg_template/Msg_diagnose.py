@@ -472,7 +472,7 @@ def fixed_deposit_stock_menu(stockNumebr, stockName): # 定存股健診
                         },
                         {
                             "type": "text",
-                            "text": "1.近一年股息殖利率大於 6 %",
+                            "text": "1.近一年現金殖利率大於 6 %",
                             "color": "#111111",
                             "flex": 4,
                             "wrap": True,
@@ -492,7 +492,7 @@ def fixed_deposit_stock_menu(stockNumebr, stockName): # 定存股健診
                         },
                         {
                             "type": "text",
-                            "text": "2.近五年平均股息殖利率大於 6 %",
+                            "text": "2.近五年平均現金股息殖利率大於 6 %",
                             "color": "#111111",
                             "wrap": True,
                             "flex": 4,
@@ -647,7 +647,7 @@ def cheap_stock_menu(stockNumebr, stockName): # 便宜股健診
                             },
                             {
                                 "type": "text",
-                                "text": "2. 股價淨值比 < 18",
+                                "text": "2. 股價淨值比 < 1.8",
                                 "color": "#111111",
                                 "wrap": True,
                                 "flex": 4,
