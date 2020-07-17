@@ -102,7 +102,7 @@ def dinchun(stockNumber):
     url2 = f'https://histock.tw/stock/{stockNumber}/%E9%99%A4%E6%AC%8A%E9%99%A4%E6%81%AF'
     pf=pandas.read_html(url)
     pf1=pandas.read_html(url2)
-    pf1=pandas.read_html(url3)
+    pf3=pandas.read_html(url3)
     x=0 # 計算通過幾項指標
     pass_list = [] # 存放是否通過
     color_list = [] # 存放是否通過的顏色
