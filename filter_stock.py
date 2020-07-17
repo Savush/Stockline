@@ -111,8 +111,11 @@ def dinchun(stockNumber):
     else: 
         pass_list.append(not_pass)
         color_list.append(not_pass_color)
-    average= [float(pf[0]['現金殖利率'][i].strip('%') for i in range(1,6))]
-    average = sum(average) / 5
+    #average= [float(pf[0]['現金殖利率'][i].strip('%') for i in range(1,6))]
+	pf= [pf[0]['現金殖利率'][i].strip('%') for i in range(1,6)]
+	pf=pd.to_numeric(pf, errors='coerce')
+    #average = sum(average) / 5
+	average= sum(pf) / 5
     if average > 6:
         pass_list.append(is_pass)
         color_list.append(is_pass_color)
