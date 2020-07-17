@@ -98,9 +98,11 @@ def mine_stock(stockNumber):
 # =================定存股===================
 def dinchun(stockNumber):
     url = f'https://histock.tw/stock/financial.aspx?no={stockNumber}&t=2'
-    url2 = f'https://histock.tw/stock/financial.aspx?no={stockNumber}&t=3&st=9'
+    url3 = f'https://histock.tw/stock/financial.aspx?no={stockNumber}&t=3&st=9'
+    url2 = f'https://histock.tw/stock/{stockNumber}/%E9%99%A4%E6%AC%8A%E9%99%A4%E6%81%AF'
     pf=pandas.read_html(url)
     pf1=pandas.read_html(url2)
+    pf1=pandas.read_html(url3)
     x=0 # 計算通過幾項指標
     pass_list = [] # 存放是否通過
     color_list = [] # 存放是否通過的顏色
@@ -121,9 +123,9 @@ def dinchun(stockNumber):
     else: 
         pass_list.append(not_pass)
         color_list.append(not_pass_color)
-    z = float(pf1[0]['年度/季別'][0])
+    z = float(pf1[0]['所屬年度'][1])
     c=0
-    for m in pf1[0]['年度/季別']:
+    for m in pf1[0]['所屬年度']:
         if float(m)==z:
             z-=1
             c+=1
@@ -135,7 +137,7 @@ def dinchun(stockNumber):
         pass_list.append(not_pass)
         color_list.append(not_pass_color)
     y=0
-    for i in pf1[0]['現金股利發放率']:
+    for i in pf3[0]['現金股利發放率']:
         if float(i.strip('%'))>50:
             y += 1
     if y>=3:
@@ -146,10 +148,10 @@ def dinchun(stockNumber):
         pass_list.append(not_pass)
         color_list.append(not_pass_color)
     average1=[]
-    if len(pf1[0]['現金股利發放率'])>=5:
-        for i in range(5):
+    if len(pf3[0]['現金股利發放率'])>=4:
+        for i in range(4):
             average1.append(float(pf1[0]['現金股利發放率'][i].strip('%')))
-        average1=sum(average1)/5
+        average1=sum(average1)/4
     else:
         average1=0
     if average1>50:
